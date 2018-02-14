@@ -1,0 +1,14 @@
+<div class="container  bg-info">
+ <h2>Products</h2>
+    <div ng-repeat="product in $ctrl.products">
+        <ul>
+            <li>{{product.title}}</li>
+            <li>{{product.company}}</li>
+            <li><img width="200" src="{{product.imgUrl}}"></li>        
+        </ul>
+    <div>
+        <button>Add to Cart</button>
+        <a ui-sref="showProductInfo({productId:product.id})">View Details</a>
+    </div>
+    </div>
+</div>
