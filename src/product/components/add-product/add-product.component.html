@@ -1,1 +1,35 @@
-<h2>Add Product Page</h2
+<h2>Add Product Page</h2>
+<form name="addProductForm" ng-submit="$ctrl.onFormSubmit($event)">
+    <div class="form-group">
+        <label for="title">Product Name</label>
+        <input 
+            required ng-model="name" 
+            class="form-control" 
+            ng-model="$ctrl.newProduct.name"
+            type="text" name="name">
+    </div>
+    <div class="form-group">
+        <label for="ProdctName">Company Name</label>
+        <input 
+            ng-model="$ctrl.newProduct.company" 
+            class="form-control"
+            type="text" name="company">
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input 
+            ng-model="$ctrl.newProduct.price" 
+            class="form-control" 
+            type="text" name="price">
+    </div>
+    <div class="form-group">
+        <label for="imgUrl">Image URL</label>
+        <input ng-model="$ctrl.newProduct.imgUrl" 
+            class="form-control" 
+            type="file" name="imgUrl">
+    </div> 
+    <div class="form-group">
+        <input type="submit" value="Add Product">
+        <input type="reset" value="Reset">
+    </div> 
+</form>    
